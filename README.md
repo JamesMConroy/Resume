@@ -1,4 +1,4 @@
-# Software Engineer for HIre
+# Software Engineer for Hire
 
 This repo contains my resume.
 
