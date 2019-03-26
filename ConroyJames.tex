@@ -2,7 +2,7 @@
 % Packages
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 
 % Format Sections
 \titleformat{\section}
@@ -21,6 +21,14 @@
 	\titlespacing{\subsection}
 	{0.25em} {0.25em} {0.5em}
 
+\titleformat{\subsubsection}
+{}
+{}
+{1em}
+{}
+	\titlespacing{\subsection}
+	{0.25em} {0.25em} {0.5em}
+
 % Format Title
 \renewcommand{\maketitle} {
 	\begin{center}
@@ -31,10 +39,10 @@
 	\end{center}
 
 
-	Email: Jconroy12@gmail.com
-	\hfill Phone: (202) 255 2703
-Github: github.com/Hannibal-ad-Portas
-	\hfill Linkedin: linkedin.com/in/james-conroy-423288173
+	Jconroy12@gmail.com
+	(202) 255 2703
+	github.com/Hannibal-ad-Portas
+	linkedin.com/in/james-conroy-423288173
 }
 
 \author{James M. Conroy}
@@ -43,59 +51,13 @@ Github: github.com/Hannibal-ad-Portas
 \begin{document}
 \maketitle
 \section{Education}
-\subsection{B.A. Computer Science \hfill  May 2019 \\
-The Catholic University of America, Washington DC}
+\subsection{The Catholic University of America \hfill Bachler of Science Computer Science \hfill  Expected May 2019 }
 
 \textbf {Relevant Coursework:}
 Artificial Intelligence,
-Unix Programming,
-Computer Graphics,
-Operating Systems,
 Analysis of Algorithms,
 Data Structures,
 Software Engineering
-\section{Senior Design Project}
-My team created a system to find efficient pathways for autonomous ground vehicles, using an aerial drone.
-The project involves Raspberry Pis, Arduino, and computer vision.
-\section{Technical Skills}
-
-\textbf{Languages:}
-c,
-c++,
-c\#,
-Java,
-Processing,
-MATLAB,
-SQL,
-Python \\
-\textbf{Tools:}
-Vim,
-Git,
-Windows,
-Linux
-
-\section{Projects}
-
-\subsection{Grid Search on a Cost Map \hfill March 2019}
-This project uses a variety of search algorithms to find a path from the start to the goal.
-The algorithms used are:
-Breadth First Search,
-Depth First Search,
-and
-A*.
-\subsection{Queen Teams Problem \hfill February 2019}
-This project finds a configuration where no queen threatens an enemy queen.
-The project uses a hill climbing algorithm to find the solution.
-Made using c++.
-
-\subsection{K-Distance Domination \hfill April 2018}
-This project generates a random vertex edge graph and then finds the set of nodes within k steps from any node.
-Made using Processing.
-
-\subsection{Cube Quest \hfill November 2016}
-I contributed the environment for this student made computer game.
-The project was made using the OpenGL library for Java.
-
 
 \section{Work Experience}
 \subsection{Technology Services \hfill Fall 2015 to Present}
@@ -122,13 +84,55 @@ Employed by the Boy Scouts of America, Mason Dixon Council Hagerstown, PA Sinoqu
 I set up and ran the technology program for the camp season,
 led three merit badge sessions,
 and managed two staff members.
+\section{Projects}
+\subsection {Integrated Drones}
+My team created a system to find efficient pathways for autonomous ground vehicles, using an aerial drone.
+The project involves Raspberry Pis, Arduino, and computer vision.
+
+\subsection{Grid Search on a Cost Map \hfill March 2019}
+This project uses a variety of search algorithms to find a path from the start to the goal.
+The algorithms used are:
+Breadth First Search,
+Depth First Search,
+and
+A*.
+\subsection{Queen Teams Problem \hfill February 2019}
+This project finds a configuration where no queen threatens an enemy queen.
+The project uses a hill climbing algorithm to find the solution.
+Made using c++.
+
+\subsection{K-Distance Domination \hfill April 2018}
+This project generates a random vertex edge graph and then finds the set of nodes within k steps from any node.
+Made using Processing.
+
+\subsection{Cube Quest \hfill November 2016}
+I contributed the environment for this student made computer game.
+The project was made using the OpenGL library for Java.
+
+
 \section{Awards and Honors}
 \subsection{Eagle Scout \hfill 2012}
 \subsection{Nominated for CUA Student Worker of the Year \hfill 2018}
 \subsection{Nominated for best Undergraduate Project at CUA Research Day \hfill April 2018}
 \subsection{Cash award winning AARP's Fraud Watch Network's Hackathon\hfill February 2017}
-\subsection{Sinoquipe Scout Reservation --- Honor Staff Award \hfill August 2016}
-\subsection{Sinoquipe Scout Reservation --- Program Director Award of Recognition \hfill August 2016}
-\subsection{Sinoquipe Scout Reservation --- Camp Director Award of Recognition \hfill August 2016}
-\subsection{CUA Scholarship }
+\subsection{Sinoquipe Scout Reservation \hfill August 2016}
+\subsubsection{Honor Staff Award, Program Director Award, Camp Director Award}
+
+\section{Technical Skills}
+
+\textbf{Programming Languages:}
+c,
+c++,
+c\#,
+Java,
+Processing,
+MATLAB,
+SQL,
+Python \\
+\textbf{Tools:}
+Vim,
+Git,
+Windows,
+Linux
+
 \end{document}
