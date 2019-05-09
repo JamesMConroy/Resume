@@ -5,6 +5,7 @@
 \usepackage[margin=0.5in]{geometry}
 
 % Format Sections
+
 \titleformat{\section}
 {\Large\bfseries}
 {}
@@ -30,20 +31,12 @@
 	{0.25em} {0.25em} {0.5em}
 
 % Format Title
-\renewcommand{\maketitle} {
-	\begin{center}
-	{\huge\bfseries
-	\theauthor}
-
-	Washington DC
-	\end{center}
-
-
-	Jconroy12@gmail.com
-	\hfill (202) 255 2703
-
-	github.com/Hannibal-ad-Portas
-	\hfill linkedin.com/in/JamesConroy-cua
+\renewcommand{\maketitle}{
+\begin{tabbing}
+Company/Name \= CIPS/James M. Conroy \\
+Position \> Computer Scientist (Level AK01) \\
+Clearance \> US/Clearable \\
+\end{tabbing}
 }
 
 \author{James M. Conroy}
@@ -52,18 +45,20 @@
 \begin{document}
 \maketitle
 \section{Education}
-\subsection{The Catholic University of America \hfill Bachler of Science Computer Science \hfill  Expected May 2019 }
+\subsection{The Catholic University of America \hfill Bachelor of Science Computer Science \hfill  Expected May 2019 }
 
 \textbf {Relevant Coursework:}
 Analysis of Algorithms,
+Artificial Intelligence,
 Data Structures,
 Software Engineering,
-Unix Programming
+Unix Programming,
+Graph Theory
 
 \section{Projects}
 \subsection{Integrated Drones \hfill September 2018 --- May 2019}
 My five person team created a system to find efficient pathways for autonomous ground vehicles, using an aerial drone.
-The project involves Raspberry Pis, Arduino, Python, and computer vision.
+The project used Raspberry Pis, Arduino, Python, and computer vision.
 
 \subsection{Queen Teams Problem \hfill February 2019}
 This project finds a configuration where no queen threatens an enemy queen.
@@ -79,7 +74,7 @@ This is a video game level made by CUA's Fall 2016 Computer Graphics class.
 I contributed the environment for this student made computer game.
 The project was made using the OpenGL library for Java.
 \section{Work Experience}
-\subsection{Technology Services \hfill Fall 2015 to Present}
+\subsection{Technology Services, The Catholic University of America \hfill Fall 2015 to Present}
 Employed by The Catholic University of America,
 I provided technical support for users over the phone, via email, and in person.
 The support includes but is not limited to:
@@ -90,16 +85,20 @@ installing new hardware in computers,
 and
 connecting computers to the campus' Active Directory.
 
-\subsection{Technology Center Instructor \hfill Summer 2016}
+\subsection{Technology Center Instructor, Boy Scouts of America \hfill Summer 2016}
 Employed by the Boy Scouts of America, Mason Dixon Council Hagerstown, PA Sinoquipe Scout Reservation,
 In this position I set up and administered a lab of 25 Ubuntu Linux laptops.
-I also instructed 4 merit badge session, leading six hundered scouts to earn the
+I also instructed 4 merit badge session, leading six hundred scouts to earn the
 Personal Management,
 Space Exploration,
 and
 Electronics
 merit badges.
-
+\subsection{Technology Center Director, Boy Scouts of America \hfill Summer 2015}
+Employed by the Boy Scouts of America, Mason Dixon Council Hagerstown, PA Sinoqipe Scout Reservation,
+I set up and ran the technology program for the camp season,
+lead three merit badge sessions,
+and managed two staff members.
 \section{Technical Skills}
 \textbf{Programming Languages:}
 c,
@@ -120,7 +119,5 @@ Linux
 \subsection{Eagle Scout \hfill 2012}
 \subsection{Nominated for CUA Student Worker of the Year \hfill 2018}
 \subsection{Nominated for best Undergraduate Project at CUA Research Day \hfill April 2018}
-\subsection{Sinoquipe Scout Reservation \hfill August 2016}
-\subsubsection{Honor Staff Award, Program Director Award, Camp Director Award}
 
 \end{document}
