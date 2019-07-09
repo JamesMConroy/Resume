@@ -1,19 +1,21 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 % Packages
 \usepackage{titlesec}
 \usepackage{titling}
 \usepackage[margin=0.6in]{geometry}
 \usepackage{ragged2e}
+\usepackage{cochineal}
+\usepackage[T1]{fontenc}
 
 % Format Sections
 \pagenumbering{gobble}
 \titleformat{\section}
-{\Large\bfseries\justify}
+{\large\bfseries\justify}
 {}
 {0em}
 {\filcenter} [\titlerule]
 	\titlespacing{\supsection}
-	{0.2em} {0.2em} {0.2em}
+	{0em} {0em} {0em}
 
 \titleformat{\subsection}
 {\bfseries\justify}
@@ -29,26 +31,26 @@
 {0em}
 {}
 	\titlespacing{\subsection}
-	{0.25em} {0.25em} {0.5em}
+	{0em} {0em} {0em}
 
 % Format Title
 \renewcommand{\maketitle} {
 	\begin{center}
-	{\huge\bfseries
+	{\Large\bfseries
 	\theauthor}
 
 	\end{center}
 
+	\setlength{\parindent}{0pt}
+	\setlength{\parskip}{0em}
 	8420 Cornell Ave.
+	\hfill Jconroy12@gmail.com
 
 	St. Louis,\ MO 63132
+	\hfill (202) 255--2703
 
-	Jconroy12@gmail.com
-
-	(202) 255 2703
-
-	Github.com/JamesMConroy
-
+	United States of America
+	\hfill Github.com/JamesMConroy
 }
 
 \author{James M. Conroy}
@@ -57,8 +59,9 @@
 \begin{document}
 \maketitle
 \section{Education}
-\subsection{The Catholic University of America \hfill Bachelors of Science Computer Science \hfill  Expected May 2019 }
+\subsection{The Catholic University of America \hspace {20pt} Bachelors of Science, Computer Science \hfill  May 2019 }
 
+\noindent
 \textbf{Relevant Coursework:}
 Analysis of Algorithms,
 Data Structures,
@@ -68,40 +71,40 @@ Unix Programming
 \section{Projects}
 \subsection{Integrated Drones \hfill September 2018 --- May 2019}
 \justify
-My five person team created a system to find efficient pathways for autonomous ground vehicles, using an aerial drone.
-The project involves Raspberry Pis, Arduino, Python, and computer vision.
+Created, as part of a five person team, an aerial drone system to find efficient pathways for autonomous ground vehicles.
+The project was made using Raspberry Pis and Arduinos, and implemented in Python.
 
 \subsection{Queen Teams Problem \hfill February 2019}
 \justify
-This project finds a configuration where no queen threatens an enemy queen.
-The project uses a hill climbing algorithm to find the solution.
-Made using c++.
+Created an AI to find a solution to a variation of the classic chess queens problem.
+The AI was implemented in C++ and used a hill climbing Algorithm.
 
 \subsection{K-Distance Domination \hfill April 2018}
 \justify
-This project generates a random vertex edge graph and then finds the set of nodes within k steps from any node.
-Made using Processing.
+This program generates a random vertex edge graph and finds the minimum K distance dominating sub graph.
+This was the subject of my 2018 Research Day presentation.
+Made using Java/Processing.
 
 \subsection{Cube Quest \hfill November 2016}
 \justify
-This is a video game level made by CUA's Fall 2016 Computer Graphics class.
-I contributed the environment for this student made computer game.
+Contributed the environment for this student made computer game.
 The project was made using the OpenGL library for Java.
+
 \section{Work Experience}
 \subsection{Technology Services \hspace {60pt}The Catholic University of America \hfill Fall 2015 to Spring 2019}
 \justify
 I provided technical support for users over the phone, via email, and in person.
-The support includes but is not limited to:
+The support included but is not limited to:
 resetting passwords,
 installing software,
 installing computers,
 installing new hardware in computers,
 and
 connecting computers to the campus' Active Directory.
-\subsection{Technology Center Instructor \hspace {40pt} Boy Scouts of America \hfill Summer 2016}
+\subsection{Technology Center Instructor \hspace {45pt} Boy Scouts of America \hfill Summer 2016}
 \justify
 In this position I set up and administered a lab of 25 Ubuntu Linux laptops.
-I also instructed 4 merit badge session, leading six hundered scouts to earn the
+I also instructed merit badge sessions and, led six hundred scouts to earn the
 Personal Management,
 Space Exploration,
 and
@@ -127,8 +130,8 @@ Vim
 Windows.
 
 \section{Awards and Honors}
-\subsection{Eagle Scout \hfill 2012}
-\subsection{Nominated for CUA Student Worker of the Year \hfill 2018}
+\subsection{Nominated for CUA Student Worker of the Year \hfill May 2018}
 \subsection{Nominated for best Undergraduate Project at CUA Research Day \hfill April 2018}
+\subsection{Eagle Scout \hfill 2012}
 
 \end{document}
