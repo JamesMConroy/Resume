@@ -2,15 +2,18 @@
 % Packages
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[margin=0.6in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{ragged2e}
 \usepackage{cochineal}
 \usepackage[T1]{fontenc}
+\usepackage{enumitem}
+
+\setlist{noitemsep}
 
 % Format Sections
 \pagenumbering{gobble}
 \titleformat{\section}
-{\large\bfseries\justify}
+{\large\bfseries}
 {}
 {0em}
 {\filcenter} [\titlerule]
@@ -18,7 +21,7 @@
 	{0em} {0em} {0em}
 
 \titleformat{\subsection}
-{\bfseries\justify}
+{\bfseries}
 {}
 {0em}
 {}
@@ -66,8 +69,41 @@
 Analysis of Algorithms,
 Data Structures,
 Software Engineering,
+Robotics,
+Computer Graphics,
 Unix Programming
 
+\section{Work Experience}
+\subsection{Technology Services \hspace {30pt}The Catholic University of America \hfill Fall 2015 to Spring 2019}
+\begin{itemize}
+	\item Installed computers:
+		\begin{itemize}
+			\item Installed the University's OS
+			\item Created necessary users
+			\item Installed and validated necessary software
+			\item Connected to the Campus' domain for active directory management
+		\end{itemize}
+	\item Migrated Campus Computers to new OS
+		\begin{itemize}
+			\item Windows 7 to 10
+			\item Mac OS High Sierra to Mac OS Mojave
+			\item using USB install media and PXE network boot.
+		\end{itemize}
+\end{itemize}
+\subsection{Technology Center Instructor \hspace {25pt} Boy Scouts of America \hfill Summer 2016}
+\begin{itemize}
+	\item Lab Administration
+		\begin{itemize}
+			\item installed 25 Ubuntu Linux Computers
+			\item limited internet access using the router's MAC white list feature
+		\end{itemize}
+	\item Counseled six hundred scouts taking the following merit badges:
+	\begin{itemize}
+		\item Personal Management
+		\item Space Exploration
+		\item Electronics
+	\end{itemize}
+\end{itemize}
 \section{Projects}
 \subsection{Integrated Drones \hfill September 2018 --- May 2019}
 \justify
@@ -90,27 +126,6 @@ Made using Java/Processing.
 Contributed the environment for this student made computer game.
 The project was made using the OpenGL library for Java.
 
-\section{Work Experience}
-\subsection{Technology Services \hspace {60pt}The Catholic University of America \hfill Fall 2015 to Spring 2019}
-\justify
-Provided technical support for users over the phone, via email, and in person.
-The support included but was not limited to:
-resetting passwords,
-installing software,
-installing computers,
-installing new hardware in computers,
-and
-connecting computers to the campus' Active Directory.
-\subsection{Technology Center Instructor \hspace {45pt} Boy Scouts of America \hfill Summer 2016}
-\justify
-Set up and administered a lab of 25 Ubuntu Linux laptops.
-Instructed merit badge sessions and, led six hundred scouts to earn the
-Personal Management,
-Space Exploration,
-and
-Electronics
-merit badges.
-
 \section{Technical Skills}
 \textbf{Programming Languages:}
 AWK,
@@ -124,6 +139,7 @@ Python,
 SQL.\\
 \textbf{Tools:}
 GIT,
+\LaTeX,
 Linux,
 SED,
 VIM,
