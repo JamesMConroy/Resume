@@ -1,4 +1,4 @@
-\documentclass[12pt, letterpaper]{article}
+\documentclass[11pt, a4paper]{article}
 % Packages
 \usepackage{titlesec}
 \usepackage{titling}
@@ -7,6 +7,7 @@
 \usepackage{cochineal}
 \usepackage[T1]{fontenc}
 \usepackage{enumitem}
+\usepackage{multicol}
 
 
 % Format Sections
@@ -26,7 +27,7 @@
 {0em}
 {}
 	\titlespacing{\subsection}
-	{0.0em} {0.0em} {0.0em}
+	{1em} {1em} {1em}
 
 \titleformat{\subsubsection}
 {}
@@ -62,36 +63,78 @@
 \begin{document}
 \maketitle
 \section{Education}
-\subsection{The Catholic University of America \hspace {20pt} Bachelors of Science, Computer Science \hfill  May 2019 }
+\subsection{The Catholic University of America \hspace {5pt} Bachelor of Science, Computer Science \hfill  May 2019 }
 
 \noindent
 \textbf{Relevant Coursework:}
-Analysis of Algorithms,
-Data Structures,
-Software Engineering,
-Robotics,
-Computer Graphics,
-Unix Programming
+\begin{multicols}{2}
+	\begin{itemize}
+	\item Analysis of Algorithms
+	\item Artificial Intelligence
+	\item Data Structures
+	\item Robotics
+	\item Software Engineering
+	\item Computer Graphics
+	\item Unix Programming
+	\end{itemize}
+\end{multicols}
 
 \section{Technical Skills}
 \textbf{Programming Languages:}
-AWK,
-C,
-C++,
-C\#,
-Java,
-MATLAB,
-Processing,
-Python,
-SQL.\\
+\begin{multicols}{3}
+	\begin{itemize}
+		\item AWK
+		\item C
+		\item C++
+		\item C\#
+		\item Java
+		\item MATLAB
+		\item Processing
+		\item Python
+		\item SQL
+	\end{itemize}
+\end{multicols}
 \textbf{Tools:}
-GIT,
-\LaTeX,
-Linux,
-SED,
-VIM,
-Windows.
-
+\begin{multicols}{3}
+	\begin{itemize}
+	\item GIT
+	\item \LaTeX
+	\item Linux
+	\item SED
+	\item VIM
+	\item Windows
+	\end{itemize}
+\end{multicols}
+\section{Projects}
+\subsection{Integrated Drones \hfill September 2018 --- May 2019}
+An aerial drone system to find efficient paths for autonomous ground vehicles.
+\begin{multicols}{2}
+	\begin{itemize}
+		\item Raspberry Pi
+		\item Computer Vision
+		\item Arduino
+		\item Search Algorithm
+		\item Python
+	\end{itemize}
+\end{multicols}
+\subsection{Queen Teams Problem \hfill February 2019}
+Created an AI to find a solution to a variation of the classic chess queens problem.
+\begin{multicols}{2}
+	\begin{itemize}
+		\item Hill Climbing Algorithm
+		\item C++
+	\end{itemize}
+\end{multicols}
+\subsection{K-Distance Domination \hfill April 2018}
+\justify
+This program generates a random vertex edge graph and finds the minimum K distance dominating sub graph.
+\begin{multicols}{2}
+	\begin{itemize}
+		\item Graph-Theory
+		\item Java / Processing
+	\end{itemize}
+\end{multicols}
+\pagebreak
 \section{Work Experience}
 \subsection{Technology Services \hspace {20pt}The Catholic University of America \hfill September 2015 to May 2019}
 \begin{itemize}
@@ -123,28 +166,6 @@ Windows.
 		\item Electronics
 	\end{itemize}
 \end{itemize}
-\section{Projects}
-\subsection{Integrated Drones \hfill September 2018 --- May 2019}
-\justify
-Created, as part of a five person team, an aerial drone system to find efficient pathways for autonomous ground vehicles.
-The project was made using Raspberry Pis and Arduinos, and implemented in Python.
-
-\subsection{Queen Teams Problem \hfill February 2019}
-\justify
-Created an AI to find a solution to a variation of the classic chess queens problem.
-The AI was implemented in C++ and used a hill climbing Algorithm.
-
-\subsection{K-Distance Domination \hfill April 2018}
-\justify
-This program generates a random vertex edge graph and finds the minimum K distance dominating sub graph.
-This was the subject of my 2018 Research Day presentation.
-Made using Java/Processing.
-
-\subsection{Cube Quest \hfill November 2016}
-\justify
-Contributed the environment for this student made computer game.
-The project was made using the OpenGL library for Java.
-
 
 \section{Awards and Honors}
 \subsection{Nominated for CUA Student Worker of the Year \hfill May 2018}
