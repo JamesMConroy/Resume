@@ -1,25 +1,55 @@
 \documentclass[11pt, a4paper]{article}
 % Packages
+\usepackage[T1]{fontenc}
+\usepackage{cochineal}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{ragged2e}
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage[margin=1in]{geometry}
-\usepackage{ragged2e}
-\usepackage{cochineal}
-\usepackage[T1]{fontenc}
-\usepackage{enumitem}
-\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{calc}
+\usepackage{tabularx}
+\usepackage[top=0.75in, bottom=0.75in, left=0.75in, right=0.75in]{geometry}
 
+\usepackage{changepage}
+\newenvironment{summary}{%
+  \begin{adjustwidth}{0em}{0em}
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{0.5em}
+}{%
+  \end{adjustwidth}
+}
+
+\raggedright  % Prevents awkward word spacing
+\hyphenpenalty=10000  % Reduces hyphenation
+\setlist[description]{leftmargin=0em, itemsep=0.2em}
+
+\definecolor{accent}{RGB}{70,142,175}
+\definecolor{linkcolor}{RGB}{50,50,50}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    filecolor=linkcolor,
+    urlcolor=accent,
+    pdftitle={James M. Conroy - Resume},
+    pdfauthor={James M. Conroy}
+}
 
 % Format Sections
 \pagenumbering{gobble}
 \setlist{noitemsep}
 \titleformat{\section}
-{\large\bfseries}
+{\Large\bfseries\color{accent}}
 {}
 {0em}
-{\filcenter} [\titlerule]
-	\titlespacing{\supsection}
-	{0em} {0em} {0em}
+{\MakeUppercase} [\titlerule]
+\titlespacing{\section}
+{0pt}{12pt}{6pt}
 
 \titleformat{\subsection}
 {\bfseries}
@@ -40,21 +70,11 @@
 % Format Title
 \renewcommand{\maketitle} {
 	\begin{center}
-	{\Large\bfseries
-	\theauthor}
-
+		{\Large\bfseries \theauthor} \\[0.3em]
+	\faEnvelope \, \href{mailto:james.conroy@hey.com}{James.Conroy@hey.com}
+	\hspace{0.5em} | \hspace{0.5em} 
+	\faGithub \, \href{https://github.com/JamesMConroy}{Github.com/JamesMConroy}
 	\end{center}
-
-	\setlength{\parindent}{0pt}
-	\setlength{\parskip}{0em}
-	8420 Cornell Ave.
-	\hfill Jconroy12@gmail.com
-
-	St. Louis,\ MO 63132
-	\hfill (202) 255--2703
-
-	United States of America
-	\hfill Github.com/JamesMConroy
 }
 
 \author{James M. Conroy}
@@ -63,10 +83,77 @@
 \begin{document}
 \maketitle
 
-\input{technicalSkills.tex}
-\input{workExp.tex}
-\input{education.tex}
-\input{awardsAndHornors.tex}
-\input{schoolProjects}
+\begin{summary}
+\noindent
+DevOps Engineer with \textbf{active security clearance} and 3+ years of experience specializing in automation and testing infrastructure. Led development of multi-architecture testing frameworks and package management solutions for air-gapped environments. Proven track record of reducing development friction and leading technical teams in government contract space.
+\end{summary}
+
+\section{Technical Skills}
+\begin{description}[
+    style=sameline,
+    leftmargin=\widthof{\bfseries Programming Languages:}+1em\relax,
+    labelwidth=\widthof{\bfseries Programming Languages:},
+    labelindent=0pt,
+    itemsep=0.3em
+]
+    \item[Infrastructure \& Cloud:] Docker/Podman, Terraform/OpenTofu, Linux, Ansible
+    \item[Programming Languages:] Python, Go, C, POSIX Shell/BASH, MAKE
+    \item[DevOps \& CI/CD:] Git, GitHub, GitLab, GitLab CI/CD
+    \item[Package Management:] PyPI, Ubuntu, Debian, Kali, CentOS, Fedora, Rust, Nim
+\end{description}
+% Custom command for job sections with right-aligned dates
+\newcommand{\jobsection}[2]{
+    \subsection*{#1 \hfill #2}
+}
+
+% Custom command for roles with right-aligned dates
+\newcommand{\role}[2]{
+    \textbf{#1} \hfill \textit{#2}
+}
+
+\section{Work Experience}
+\jobsection{Def-Logix}{Jun 2021 -- Present}{
+		\role{DevOps Engineer III} {Jun 2023 -- Present}
+			\begin{itemize}
+				\item Led cross-functional team (3 direct reports plus additional developers on loan from other teams) in designing and implementing e2e test framework
+				\item Architected scalable testing infrastructure using Python and Go, supporting 25+ OS/CPU architecture combinations
+				\item Optimized test execution environment using Ansible and Terraform, reducing iteration time from 12+ minutes to 3 minutes 
+				\item Introduced ensemble programming practices, improving team problem-solving capabilities and knowledge transfer
+			\end{itemize}
+
+	\role{DevOps Engineer II} {Jan 2022 -- Jun 2023}
+			\begin{itemize}
+				\item Architected and maintained air-gapped package repository system serving 30-40 developers across several development teams
+				\item Streamlined secure dependency management by implementing local mirrors of PyPI, Linux distributions, and language-specific repositories, reducing environment setup time from days to minutes
+				\item Initiated and led technical brown bag sessions to promote knowledge sharing across development teams
+				\item Reduced dependency-related support tickets from 8+ monthly to 6 annually 
+				\item Improved code quality through implementation of automated linting and testing processes
+				\item Implemented SAST pipeline integration across all product repositories, automating security findings into project backlogs
+				\item Standardized CI/CD pipelines, resulting in more predictable and reliable releases
+	\end{itemize}
+	\role{DevOps Engineer I}{Jun 2021 -- Jan 2022}
+			\begin{itemize}
+				\item Designed and implemented automated infrastructure deployment solutions
+				\item Streamlined deployment processes by refactoring complex Makefiles and build dependencies
+				\item Developed tools for configuration management and deployment automation in air-gapped environment
+			\end{itemize}
+}
+
+\jobsection{Cigna}{Oct 2019 -- Jun 2021} {
+
+		\role{Associate System Analyst}{\,}
+			\begin{itemize}
+				\item Triage and resolve IT tickets in response to monitoring and reported issues
+				\item Automated incident response processes, reducing manual intervention time
+				\item Developed and maintained Standard Operating Procedures for incident management
+			\end{itemize}
+}
+
+\section{Education \& Achivements}
+\textbf{Bachelor of Science, Computer Science}, The Catholic University of America \hfill \, \textit{May 2019}
+
+\textbf{Eagle Scout}, Boy Scouts of America \hfill \textit{Oct 2012}
+
+% \input{awardsAndHonors.tex}
 
 \end{document}
