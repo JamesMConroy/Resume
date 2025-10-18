@@ -1,0 +1,141 @@
+#import "@preview/ats-friendly-resume:0.1.1": *
+
+// Your personal information replace mine with yours (pls don't steal my identity)
+#let name = "James Conroy"
+#let location = "San Antonio Texas"
+#let email = "James.Conroy@hey.com"
+#let phone = "(202) 255-2703"
+// #let linkedin = "linkedin.com/in/example"
+#let github = "github.com/JamesMConroy"
+// #let portfolio = "aybangueco.vercel.app"
+
+#show: resume.with(
+  author: name,
+  author-position: center,
+  // Personal information
+  // Below these lines are optional
+  // Feel free to comment out and remove them
+  location: location,
+  email: email,
+  phone: phone,
+  // linkedin: linkedin,
+  github: github,
+  //portfolio: portfolio,
+  personal-info-position: center,
+  // Document formatting and values
+  // These are already defined by default, feel free to omit or edit them
+  color-enabled: true,
+  text-color: "#000080",
+  font: "New Computer Modern",
+  paper: "us-letter",
+  author-font-size: 20pt,
+  font-size: 10pt,
+  lang: "en",
+)
+
+#block[
+DevOps Engineer with #strong[active security clearance] and 3+ years of
+experience specializing in automation and testing infrastructure. Led
+development of multi-architecture testing frameworks and package
+management solutions for air-gapped environments. Proven track record of
+reducing development friction and leading technical teams in government
+contract space.
+]
+
+== Technical Skills <technical-skills>
+
+
+- *Programming Languages*: Python, Go, C, POSIX Shell/BASH, RUST
+- *DevOps Tools*: Docker/Podman, Terraform/OpenTofu, Linux, Ansible, Gitlab CI/CD
+- *Developer Tools*: Git, GitHub, GitLab, Make, Meson
+
+
+== Work Experience <work-experience>
+
+#work(
+  company: "Def-Logix",
+  role: "DevOps Engineer III",
+  dates: dates-util(start-date: "June 2023", end-date: "Present"),
+  location: location,
+)
+
+- Led cross-functional team (3 direct reports plus additional developers
+  on loan from other teams) in designing and implementing e2e test
+  framework
+
+- Architected scalable testing infrastructure using Python and Go,
+  supporting 25+ OS/CPU architecture combinations
+
+- Optimized test execution environment using Ansible and Terraform,
+  reducing iteration time from 12+ minutes to 3 minutes
+
+- Introduced ensemble programming practices, improving team
+  problem-solving capabilities and knowledge transfer
+
+#work(
+  company: "Def-Logix",
+  role: "DevOps Engineer II",
+  dates: dates-util(start-date: "Jan 2022", end-date: "June 2023"),
+  location: location,
+)
+
+- Architected and maintained air-gapped package repository system
+  serving 30-40 developers across several development teams
+
+- Streamlined secure dependency management by implementing local mirrors
+  of PyPI, Linux distributions, and language-specific repositories,
+  reducing environment setup time from days to minutes
+
+- Initiated and led technical brown bag sessions to promote knowledge
+  sharing across development teams
+
+- Reduced dependency-related support tickets from 8+ monthly to 6
+  annually
+
+- Improved code quality through implementation of automated linting and
+  testing processes
+
+- Implemented SAST pipeline integration across all product repositories,
+  automating security findings into project backlogs
+
+- Standardized CI/CD pipelines, resulting in more predictable and
+  reliable releases
+
+#work(
+  company: "Def-Logix",
+  role: "DevOps Engineer I",
+  dates: dates-util(start-date: "June 2021", end-date: "Jan 2022"),
+  location: location,
+)
+
+- Designed and implemented automated infrastructure deployment solutions
+
+- Streamlined deployment processes by refactoring complex Makefiles and
+  build dependencies
+
+- Developed tools for configuration management and deployment automation
+  in air-gapped environment
+
+#work(
+  company: "Cigna",
+  role: "Associate System Analyst",
+  dates: dates-util(start-date: "Oct 2019", end-date: "Jun 2021"),
+  location: "St. Louis, MO",
+)
+
+== Education & Achivements
+
+#edu(
+  institution: "The Catholic University of America",
+  location: "Washington DC",
+  degree: "Bachelor of Science in Computer Science",
+  dates: "May 2019",
+)
+
+#edu(
+  institution: "The Boy Scouts of America",
+  degree: "Eagle Scout",
+  dates: "Oct 2012",
+)
+
+// vi: ft=typst
