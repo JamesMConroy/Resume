@@ -82,10 +82,10 @@ unreliable pipelines into fast, trustworthy ones.
   times from 45 to 20 minutes by reworking runner storage and moving the
   sstate cache from NFS to *S3* object storage on *OpenStack*
 
-- Cut median *Go* build time from 12–18 minutes to ~3 (p90: 35–42 down to ~7 minutes)
+- Cut median *Go* build time from 12–18 minutes to \~3 (p90: 35–42 down to \~7 minutes)
 
 - Took over an internal artifact dependency manager and rolled it out to every
-  product job, eliminating artifact-pull failures that caused ~half of all
+  product job, eliminating artifact-pull failures that caused \~half of all
   embedded build failures
 
 - Built hardware-free over-the-air (OTA) update testing in *QEMU*, so firmware
@@ -94,7 +94,7 @@ unreliable pipelines into fast, trustworthy ones.
 
 - Rebuilt the HSM provisioning pipeline with typed inputs, trusted-only gating
   for HIL tests and fail-fast checks, cutting asset check-in failures from 65%
-  to 18% and hardware update failures from 50% to ~20%
+  to 18% and hardware update failures from 50% to \~20%
 
 - Overhauled a team's *Terraform* for *Proxmox* VM deployments: moved state
   out of Git into *GitLab*-managed remote state with locking, replaced a
