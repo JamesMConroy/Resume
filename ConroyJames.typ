@@ -4,9 +4,15 @@
 #set page(paper: "us-letter")
 
 #show: if garden {
-  import "@local/florilegium:2.1.0": florilegium
+  import "@local/florilegium:2.1.0": *
   florilegium.with(
-    margin: (left: 60mm, right: 15mm, top: 15mm, bottom: 15mm),
+    mode: "authored",
+    intensity: 0.6,
+    ink: rgb("#000080"),
+    aging: true,
+    seed: 42,
+    visitors: false,
+    margin: (left: 45mm, right: 15mm, top: 15mm, bottom: 30mm),
   )
 } else {
   it => it
@@ -97,9 +103,8 @@ unreliable pipelines into fast, trustworthy ones.
   to 18% and hardware update failures from 50% to \~20%
 
 - Overhauled a team's *Terraform* for *Proxmox* VM deployments: moved state
-  out of Git into *GitLab*-managed remote state with locking, replaced a
-  script that copied modules into scratch directories with native module
-  calls, and added `terraform plan` on every merge request
+  out of Git into *GitLab*-managed remote state with locking and added
+  `terraform plan` on every merge request
 
 - Replaced long-lived access tokens in pipelines with scoped `CI_JOB_TOKEN`
   auth and deleted the old tokens entirely, then trained the IT organization
