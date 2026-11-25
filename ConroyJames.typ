@@ -69,8 +69,7 @@ unreliable pipelines into fast, trustworthy ones.
   times from 45 to 20 minutes by reworking runner storage and moving the
   sstate cache from NFS to *S3* object storage on *OpenStack*
 
-- Cut median *Go* build time from 12–18 minutes to ~3 (p90: 35–42 by giving
-  builds authenticated access to internal modules
+- Cut median *Go* build time from 12–18 minutes to ~3 (p90: 35–42 down to ~7 minutes)
 
 - Took over an internal artifact dependency manager and rolled it out to every
   product job, eliminating artifact-pull failures that caused ~half of all
@@ -133,8 +132,6 @@ unreliable pipelines into fast, trustworthy ones.
   to surface security findings without premium licensing reducing cost by \$60k
   annually
 
-- Initiated and led technical talks to promote knowledge sharing across
-  development teams
 
 
 #work(
@@ -150,6 +147,10 @@ unreliable pipelines into fast, trustworthy ones.
 
 - Run a *k3s* cluster managed entirely through *GitOps* with *Flux*, monitored
   with *Prometheus* and *Grafana*
+
+- Deployed an LLM chat service via *Flux*, calling hosted models through *OpenRouter*
+
+- Built an AI agent pipeline that turns *Linear* issues into pull requests
 
 == Education
 
