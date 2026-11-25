@@ -122,9 +122,8 @@ unreliable pipelines into fast, trustworthy ones.
 - Architected and maintained air-gapped package repository system serving 30-40
   developers across several development teams
 
-- Streamlined secure dependency management by implementing local mirrors of
-  *PyPI*, *Linux* distributions, *Rust* and other language-specific
-  repositories, reducing environment setup time from 1 day to 30 minutes.
+- Built local mirrors of *PyPI*, *Linux* distributions, *Rust* and other
+  package repositories, cutting environment setup from 1 day to 30 minutes
 
 - Reduced dependency-related support tickets from 8+ monthly to 6 annually
 
@@ -145,12 +144,14 @@ unreliable pipelines into fast, trustworthy ones.
 
 #project(name: "Kubernetes Homelab")
 
-- Run a *k3s* cluster managed entirely through *GitOps* with *Flux*, monitored
-  with *Prometheus* and *Grafana*
+- Run a mixed amd64/arm64 *k3s* cluster on old laptops and Raspberry Pi 5s,
+  managed through *GitOps* with *Flux* and monitored with *Prometheus* and
+  *Grafana*
 
 - Deployed an LLM chat service via *Flux*, calling hosted models through *OpenRouter*
 
-- Built an AI agent pipeline that turns *Linear* issues into pull requests
+- Built an in-cluster AI agent pipeline: a dispatcher polls *Linear* for
+  labeled issues and turns them, one at a time, into pull requests for review
 
 == Education
 
