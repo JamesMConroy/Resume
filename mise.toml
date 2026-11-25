@@ -1,2 +1,14 @@
 [tools]
 lua = "latest"
+
+[tasks."build:plain"]
+description = "Build the plain resume (for applications)"
+run = "typst compile ConroyJames.typ"
+
+[tasks."build:garden"]
+description = "Build the resume with the florilegium margin"
+run = "typst compile --input garden=true ConroyJames.typ ConroyJames-garden.pdf"
+
+[tasks.build]
+description = "Build both resume versions"
+depends = ["build:plain", "build:garden"]

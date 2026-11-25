@@ -1,4 +1,13 @@
 #import "./template.typ": *
+#import "@local/florilegium:2.1.0": florilegium
+#let garden = sys.inputs.at("garden", default: "false") == "true"
+#set page(paper: "us-letter")
+#show: if garden {
+  florilegium.with(margin: (left: 50mm, right: 15mm, top: 15mm, bottom: 15mm))
+} else {
+  it => it
+}
+#let garden = sys.inputs.at("garden", default: "false") == "true"
 
 // Your personal information replace mine with yours (pls don't steal my identity)
 #let name = "James Conroy"
@@ -28,10 +37,10 @@
   color-enabled: true,
   text-color: "#000080",
   font: "Libertinus Serif",
-  paper: "us-letter",
   author-font-size: 20pt,
   font-size: 12pt,
   lang: "en",
+  margin: if garden { none } else { 1in },
 )
 
 //#set list(spacing: 0.65em)

@@ -1,5 +1,6 @@
 #import "@preview/ez-today:1.1.0"
 
+
 #let resume(
   // Name of the author (you)
   author: "",
@@ -20,6 +21,7 @@
   author-font-size: 20pt,
   font-size: 10pt,
   lang: "en",
+  margin: 1in,
   body,
 ) = {
   // Sets document metadata
@@ -32,10 +34,9 @@
     lang: lang,
     ligatures: false,
   )
-  set page(
-    margin: 1in,
-    paper: paper,
-  )
+  
+  set page(paper: paper)
+  set page(margin: margin) if margin != none
 
   // Accent Color Styling
   show heading: set text(fill: if color-enabled { rgb(text-color) } else { black })
