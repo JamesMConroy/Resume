@@ -1,9 +1,13 @@
 #import "./template.typ": *
 #import "@local/florilegium:2.1.0": florilegium
+
 #let garden = sys.inputs.at("garden", default: "false") == "true"
 #set page(paper: "us-letter")
+
 #show: if garden {
-  florilegium.with(margin: (left: 50mm, right: 15mm, top: 15mm, bottom: 15mm))
+  florilegium.with(
+    margin: (left: 60mm, right: 15mm, top: 15mm, bottom: 15mm),
+  )
 } else {
   it => it
 }
